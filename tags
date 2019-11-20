@@ -1,0 +1,142 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AttendKey	model/basic_modules.py	/^class AttendKey(nn.Module):$/;"	c
+AttendKey	model/relate_modules.py	/^class AttendKey(nn.Module):$/;"	c
+BiRnnEncoder	model/question_encoder.py	/^class BiRnnEncoder(nn.Module):$/;"	c
+BowEncoder	model/question_encoder.py	/^class BowEncoder(nn.Module):$/;"	c
+Controller	model/controller.py	/^class Controller(nn.Module):$/;"	c
+DocumentDataset	dataset.py	/^class DocumentDataset(torch.utils.data.Dataset):$/;"	c
+NoOp	model/basic_modules.py	/^class NoOp(nn.Module):$/;"	c
+NoOp	model/relate_modules.py	/^class NoOp(nn.Module):$/;"	c
+PAD_TOKEN	preprocess/preprocess_document.py	/^PAD_TOKEN = "<PAD>"$/;"	v
+SPECIAL_TOKENS	preprocess/utils.py	/^SPECIAL_TOKENS = {$/;"	v
+SearchNeighbors	model/basic_modules.py	/^class SearchNeighbors(nn.Module):$/;"	c
+TransferEdge	model/relate_modules.py	/^class TransferEdge(nn.Module):$/;"	c
+UNK_TOKEN	preprocess/preprocess_document.py	/^UNK_TOKEN = "<UNK>"$/;"	v
+VQA	model/basic_model.py	/^class VQA(nn.Module):$/;"	c
+VQA	model/relate_model.py	/^class VQA(nn.Module):$/;"	c
+XNMNet	model/net.py	/^class XNMNet(nn.Module):$/;"	c
+_Seq2Seq	utils/generate_programs.py	/^class _Seq2Seq(nn.Module):$/;"	c
+__all__	utils/generate_programs.py	/^__all__ = ['load_model', 'generate_programs']$/;"	v
+__getitem__	dataset.py	/^    def __getitem__(self, index):$/;"	m	class:DocumentDataset	file:
+__init__	dataset.py	/^    def __init__(self, root_dir, vocab):$/;"	m	class:DocumentDataset
+__init__	model/basic_model.py	/^    def __init__(self, num_tokens, word_dim, hidden_dim,$/;"	m	class:VQA
+__init__	model/basic_modules.py	/^    def __init__(self):$/;"	m	class:AttendKey
+__init__	model/basic_modules.py	/^    def __init__(self, hidden_dim):$/;"	m	class:SearchNeighbors
+__init__	model/controller.py	/^    def __init__(self, num_modules, lstm_dim, max_step, use_gumbel, device):$/;"	m	class:Controller
+__init__	model/net.py	/^    def __init__(self, **kwargs):$/;"	m	class:XNMNet
+__init__	model/question_encoder.py	/^    def __init__(self, dim_word, dim_hidden):$/;"	m	class:BiRnnEncoder
+__init__	model/question_encoder.py	/^    def __init__(self, num_tokens, hidden_dim):$/;"	m	class:BowEncoder
+__init__	model/relate_model.py	/^    def __init__(self, num_tokens, word_dim, hidden_dim,$/;"	m	class:VQA
+__init__	model/relate_modules.py	/^    def __init__(self):$/;"	m	class:AttendKey
+__init__	model/relate_modules.py	/^    def __init__(self, input_dim):$/;"	m	class:TransferEdge
+__init__	utils/generate_programs.py	/^    def __init__(self, $/;"	m	class:_Seq2Seq
+__len__	dataset.py	/^    def __len__(self):$/;"	m	class:DocumentDataset	file:
+_move_ptr_bw	model/basic_modules.py	/^def _move_ptr_bw(stack_ptr):$/;"	f
+_move_ptr_bw	model/relate_modules.py	/^def _move_ptr_bw(stack_ptr):$/;"	f
+_move_ptr_fw	model/basic_modules.py	/^def _move_ptr_fw(stack_ptr):$/;"	f
+_move_ptr_fw	model/relate_modules.py	/^def _move_ptr_fw(stack_ptr):$/;"	f
+args	utils/find_salient.py	/^    args = parser.parse_args()$/;"	v
+arguments	preprocess/preprocess_questions.py	/^    arguments = parser.parse_args()$/;"	v
+before_rnn	utils/generate_programs.py	/^    def before_rnn(self, x, replace=0):$/;"	m	class:_Seq2Seq
+build_subtree	preprocess/programs.py	/^    def build_subtree(cur):$/;"	f	function:list_to_tree
+build_vocab	preprocess/utils.py	/^def build_vocab(sequences, min_token_count=1, delim=" ",$/;"	f
+choices	preprocess/preprocess_questions.py	/^                        choices=["chain", "prefix", "postfix"])$/;"	v
+convert_david_program_to_mine	utils/misc.py	/^def convert_david_program_to_mine(program, vocab):$/;"	f
+convert_question_str_to_tensor	utils/generate_programs.py	/^def convert_question_str_to_tensor(question, vocab, question_len):$/;"	f
+convert_to_one_hot	model/basic_modules.py	/^def convert_to_one_hot(indices, num_classes):$/;"	f
+convert_to_one_hot	model/relate_modules.py	/^def convert_to_one_hot(indices, num_classes):$/;"	f
+convert_to_one_hot	utils/misc.py	/^def convert_to_one_hot(indices, num_classes):$/;"	f
+count_nodes	preprocess/programs.py	/^    def count_nodes(cur):$/;"	f	function:tree_to_list
+david_generate_single_program	utils/generate_programs.py	/^def david_generate_single_program(question, program_generator, vocab, question_len=46):$/;"	f
+decode	preprocess/utils.py	/^def decode(seq_idx, idx_to_token, delim=None, stop_at_end=True):$/;"	f
+decoder	utils/generate_programs.py	/^    def decoder(self, encoded, y, h0=None, c0=None):$/;"	m	class:_Seq2Seq
+device	utils/find_salient.py	/^    device = 'cuda'$/;"	v
+dfs	utils/find_salient.py	/^def dfs(mask, flag, out, i, j, h, w):$/;"	f
+encode	preprocess/utils.py	/^def encode(seq_tokens, token_to_index, allow_unk=False):$/;"	f
+encode_bow	preprocess/preprocess_document.py	/^def encode_bow(texts, vocab):$/;"	f
+encoder	utils/generate_programs.py	/^    def encoder(self, x):$/;"	m	class:_Seq2Seq
+find_neighbors	preprocess/preprocess_document.py	/^def find_neighbors(vertex, vertex_vectors):$/;"	f
+forward	model/basic_model.py	/^    def forward(self, questions, questions_len, vertex_vectors, edge_matrices):$/;"	m	class:VQA
+forward	model/basic_modules.py	/^    def forward(self, node_feat, query, edge_matrices,$/;"	m	class:AttendKey
+forward	model/basic_modules.py	/^    def forward(self, node_feat, query, edge_matrices,$/;"	m	class:NoOp
+forward	model/basic_modules.py	/^    def forward(self, node_feat, query, edge_matrices,$/;"	m	class:SearchNeighbors
+forward	model/controller.py	/^    def forward(self, lstm_seq, q_encoding, embed_seq, seq_length_batch):$/;"	m	class:Controller
+forward	model/net.py	/^    def forward(self, programs, program_inputs, edge_index, node_index):$/;"	m	class:XNMNet
+forward	model/question_encoder.py	/^    def forward(self, input_sequence, input_embedded, sequence_lens):$/;"	m	class:BiRnnEncoder
+forward	model/question_encoder.py	/^    def forward(self, x):$/;"	m	class:BowEncoder
+forward	model/relate_model.py	/^    def forward(self, questions, questions_len, vertex_vectors, edge_matrices):$/;"	m	class:VQA
+forward	model/relate_modules.py	/^    def forward(self, node_feat, query, edge_matrices,$/;"	m	class:AttendKey
+forward	model/relate_modules.py	/^    def forward(self, node_feat, query, edge_matrices,$/;"	m	class:NoOp
+forward	model/relate_modules.py	/^    def forward(self, node_feat, query, edge_matrices,$/;"	m	class:TransferEdge
+forward_and_return_intermediates	model/net.py	/^    def forward_and_return_intermediates(self, programs, program_inputs, edge_index, node_index):$/;"	m	class:XNMNet
+function_to_str	preprocess/programs.py	/^def function_to_str(f):$/;"	f
+generate_programs	utils/generate_programs.py	/^def generate_programs(h5_file, program_generator, dest_dir, batch_size):$/;"	f
+generate_single_program	utils/generate_programs.py	/^def generate_single_program(question, program_generator, vocab, device, question_len=46):$/;"	f
+get_dims	utils/generate_programs.py	/^    def get_dims(self, x=None, y=None):$/;"	m	class:_Seq2Seq
+get_node_attributes	preprocess/preprocess_document.py	/^def get_node_attributes(region, vocab, index, text_len=10):$/;"	f
+get_num_inputs	preprocess/programs.py	/^def get_num_inputs(f):$/;"	f
+get_true_node_attributes	preprocess/preprocess_document.py	/^def get_true_node_attributes(region, vocab, index):$/;"	f
+helper	preprocess/programs.py	/^    def helper():$/;"	f	function:postfix_to_tree
+helper	preprocess/programs.py	/^    def helper():$/;"	f	function:prefix_to_tree
+helper	preprocess/programs.py	/^    def helper(cur):$/;"	f	function:tree_to_postfix
+helper	preprocess/programs.py	/^    def helper(cur):$/;"	f	function:tree_to_prefix
+helper	preprocess/programs.py	/^    def helper(cur, idx):$/;"	f	function:tree_to_list
+infer	model/basic_model.py	/^    def infer(self, questions, questions_len, vertex_vectors, edge_matrices, raw_nodes):$/;"	m	class:VQA
+infer	model/relate_model.py	/^    def infer(self, questions, questions_len, vertex_vectors, edge_matrices, raw_nodes):$/;"	m	class:VQA
+invert_dict	dataset.py	/^def invert_dict(d):$/;"	f
+invert_dict	utils/misc.py	/^def invert_dict(d):$/;"	f
+is_chain	preprocess/programs.py	/^def is_chain(program_list):$/;"	f
+list_to_postfix	preprocess/programs.py	/^def list_to_postfix(program_list):$/;"	f
+list_to_prefix	preprocess/programs.py	/^def list_to_prefix(program_list):$/;"	f
+list_to_str	preprocess/programs.py	/^def list_to_str(program_list):$/;"	f
+list_to_tree	preprocess/programs.py	/^def list_to_tree(program_list):$/;"	f
+load_program_generator	utils/generate_programs.py	/^def load_program_generator(checkpoint):$/;"	f
+load_vocab	preprocess/preprocess_document.py	/^def load_vocab(vocab_path):$/;"	f
+logical_not	utils/generate_programs.py	/^def logical_not(x):$/;"	f
+logical_or	utils/generate_programs.py	/^def logical_or(x, y):$/;"	f
+main	preprocess/preprocess_document.py	/^def main():$/;"	f
+main	preprocess/preprocess_questions.py	/^def main(args):$/;"	f
+main	train.py	/^def main():$/;"	f
+main	utils/find_salient.py	/^def main(args, module_net, device):$/;"	f
+model_path	utils/find_salient.py	/^    model_path = 'models\/clevr-reg-hres.pt'$/;"	v
+module_net	utils/find_salient.py	/^    module_net = load_tbd_net(model_path, load_vocab(vocab_path))$/;"	v
+parser	preprocess/preprocess_questions.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	utils/find_salient.py	/^    parser = argparse.ArgumentParser()$/;"	v
+postfix_to_list	preprocess/programs.py	/^def postfix_to_list(program_postfix):$/;"	f
+postfix_to_tree	preprocess/programs.py	/^def postfix_to_tree(program_postfix):$/;"	f
+prefix_to_list	preprocess/programs.py	/^def prefix_to_list(program_prefix):$/;"	f
+prefix_to_tree	preprocess/programs.py	/^def prefix_to_tree(program_prefix):$/;"	f
+process_document_json	preprocess/preprocess_document.py	/^def process_document_json(data, vocab, get_raw=False):$/;"	f
+process_position_json	preprocess/preprocess_document.py	/^def process_position_json(data, vocab, get_raw=False):$/;"	f
+program_to_str	preprocess/preprocess_questions.py	/^def program_to_str(program, mode):$/;"	f
+punc	utils/generate_programs.py	/^punc = '!"#$%&\\'()*+-.\/:<=>?@[\\\\]^_`{|}~' # string.punctuation excluding comma and semicolon$/;"	v
+punctuation_regex	utils/generate_programs.py	/^punctuation_regex = re.compile('[{}]'.format(re.escape(punc)))$/;"	v
+read_from_stack	model/basic_modules.py	/^def read_from_stack(att_stack, stack_ptr):$/;"	f
+read_from_stack	model/relate_modules.py	/^def read_from_stack(att_stack, stack_ptr):$/;"	f
+refine_node_features	preprocess/preprocess_document.py	/^def refine_node_features(vertex_vectors):$/;"	f
+reinforce_sample	utils/generate_programs.py	/^    def reinforce_sample(self, x, max_length=30):$/;"	m	class:_Seq2Seq
+reverse_padded_sequence	utils/misc.py	/^def reverse_padded_sequence(inputs, lengths, batch_first=False):$/;"	f
+same_column	preprocess/preprocess_document.py	/^    def same_column(item):$/;"	f	function:find_neighbors
+same_row	preprocess/preprocess_document.py	/^    def same_row(item):$/;"	f	function:find_neighbors
+save_checkpoint	train.py	/^def save_checkpoint(epoch, model, optimizer, path):$/;"	f
+search	utils/find_salient.py	/^def search(mask, h, w):$/;"	f
+sharpen_ptr	model/basic_modules.py	/^def sharpen_ptr(stack_ptr, hard):$/;"	f
+sharpen_ptr	model/relate_modules.py	/^def sharpen_ptr(stack_ptr, hard):$/;"	f
+show_graph	preprocess/preprocess_document.py	/^def show_graph(image, vertex_vectors, edge_matrices):$/;"	f
+str_to_function	preprocess/programs.py	/^def str_to_function(s):$/;"	f
+test_output	train.py	/^def test_output(args):$/;"	f
+todevice	utils/misc.py	/^def todevice(tensor, device):$/;"	f
+tokenize	preprocess/utils.py	/^def tokenize(s, delim=" ",$/;"	f
+train	train.py	/^def train(args):$/;"	f
+tree_to_list	preprocess/programs.py	/^def tree_to_list(program_tree):$/;"	f
+tree_to_postfix	preprocess/programs.py	/^def tree_to_postfix(program_tree):$/;"	f
+tree_to_prefix	preprocess/programs.py	/^def tree_to_prefix(program_tree):$/;"	f
+vocab_path	utils/find_salient.py	/^    vocab_path = 'data\/vocab.json'$/;"	v
+write_to_stack	model/basic_modules.py	/^def write_to_stack(att_stack, stack_ptr, att):$/;"	f
+write_to_stack	model/relate_modules.py	/^def write_to_stack(att_stack, stack_ptr, att):$/;"	f
+x	data_ibm_train_kv/split_data.py	/^x = len(os.listdir('.\/input_kv_msau\/'))$/;"	v
