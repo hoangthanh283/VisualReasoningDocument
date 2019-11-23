@@ -24,13 +24,17 @@ class BiRnnEncoder(nn.Module):
         """
         # [seq_max_len, batch_size, word_dim]
         embedded = input_embedded
+        
         # [seq_max_len, batch_size, dim_hidden/2]
         forward_outputs = self.forward_gru(embedded)[0]
         backward_embedded = reverse_padded_sequence(embedded, sequence_lens)
+        
         backward_outputs = self.backward_gru(backward_embedded)[0]
         backward_outputs = reverse_padded_sequence(backward_outputs, sequence_lens)
+        
         # [seq_max_len, batch_size, dim_hidden]
         outputs = torch.cat([forward_outputs, backward_outputs], dim=2)
+        
         # indexing outputs via input_seq_lens
         hidden = []
         for i, l in enumerate(sequence_lens):

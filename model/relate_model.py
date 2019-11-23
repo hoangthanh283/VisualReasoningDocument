@@ -32,7 +32,7 @@ class VQA(nn.Module):
 
     def forward(self, questions, questions_len, vertex_vectors, edge_matrices):
         batch_size = questions.shape[0]
-        num_node = vertex_vectors.shape[1]
+        num_node = vertex_vectors.shape[1] + 5
 
         # node encoding
         node_feat = torch.zeros([batch_size, num_node, self.hidden_dim]).float().to(self.device)
@@ -56,6 +56,7 @@ class VQA(nn.Module):
         att_stack = torch.full([batch_size, num_node, self.stack_size], 0.0).to(self.device)
         stack_ptr = torch.zeros(batch_size, self.stack_size).to(self.device)
         stack_ptr[:, 0] = 1
+
         # cache for visualization
         cache_module_prob = []
         cache_attn = []

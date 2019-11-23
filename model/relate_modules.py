@@ -114,17 +114,27 @@ class AttendKey(nn.Module):
         attn = torch.sigmoid(logits)
 
         stack_ptr = _move_ptr_fw(stack_ptr)
-        att_stack = write_to_stack(att_stack, stack_ptr, attn).to(node_feat.device)
+        att_stack = write_to_stack(att_stack, \
+            stack_ptr, attn).to(node_feat.device)
         return att_stack, stack_ptr
 
 
 class TransferEdge(nn.Module):
     def __init__(self, input_dim):
         super(TransferEdge, self).__init__()
-        self.linear = nn.Linear(input_dim, 4)
+        # self.linear = nn.Linear(input_dim, 4)
+        self.linear = nn.Linear(input_dim, 5)
+        self.conv_2d = nn.Conv2d(5, 5, kernel_size=3, padding=1)
 
     def forward(self, node_feat, query, edge_matrices,
                 att_stack, stack_ptr):
+        
+        edge_matrices = F.pad(edge_matrices, \
+            pad=(0, 0, 5, 0, 5, 0), mode='constant', value=0)
+        edge_matrices = edge_matrices.permute(0, 3, 1, 2)
+        edge_matrices = self.conv_2d(edge_matrices)
+        edge_matrices = edge_matrices.permute(0, 2, 3, 1)
+
         query = F.softmax(self.linear(query), dim=-1)
         query = query.view(1, 1, -1).expand_as(edge_matrices)
         edge_attn = torch.sum(edge_matrices * query, dim=3)
@@ -139,5 +149,7 @@ class TransferEdge(nn.Module):
         norm = 1 if norm <= 1 else norm
         new_attn = new_attn / norm
 
-        att_stack = write_to_stack(att_stack, stack_ptr, new_attn).to(node_feat.device)
+        att_stack = write_to_stack(att_stack, \
+            stack_ptr, new_attn).to(node_feat.device)
+
         return att_stack, stack_ptr
